@@ -123,3 +123,28 @@ Section:NewButton("Boss1", "ButtonInfo", function()
     print("Clicked")
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-1718.52515, 302.397888, 193.451859, -0.292409182, 6.45918306e-08, 0.956293285, 2.58820254e-08, 1, -5.96299188e-08, -0.956293285, 7.31447169e-09, -0.292409182)
 end)
+Section:NewButton("ฺBoss6", "ButtonInfo", function()
+    print("Clicked")
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1105.45374, 303.77951, 2259.9314, -0.242867649, -1.44370738e-08, 0.970059454, 1.57644509e-09, 1, 1.52773527e-08, -0.970059454, 5.23962029e-09, -0.242867649)
+end)
+local Tab = Window:NewTab("Random")
+local Section = Tab:NewSection("Sword")
+Section:NewButton("Random Sword", "ButtonInfo", function()
+    print("Clicked")
+    
+local args = {
+    [1] = {
+        [1] = 9,
+        [2] = 10,
+        [3] = 11,
+        [4] = 12,
+        [5] = 13,
+        [6] = 14
+    },
+    [2] = "Sword",
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").RmEvent:FindFirstChild("Status/Data").DrawSuccess:FireServer(unpack(args))
+
+end)
